@@ -11,7 +11,7 @@
     - name: id command as root user
       shell: id
       register: out2
+      become: yes
 
     - debug:
         msg: "{{out2}}"
-        
