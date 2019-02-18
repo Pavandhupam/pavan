@@ -1,0 +1,7 @@
+- name: Print a fact from gathered fact
+  hosts: all
+  tasks:
+    - name: Print fact 
+      debug:
+        msg: "IPAddress = {{ansible_default_ipv4}}"
+        
