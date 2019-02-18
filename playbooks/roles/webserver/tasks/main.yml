@@ -1,0 +1,4 @@
+- name: Install Web Server 
+  package:
+    name: httpd
+    state: present
