@@ -9,3 +9,17 @@
     - name: Print fact only address
       debug:
         msg: "IPAddress = {{ansible_default_ipv4.address}}"
+
+# Now you are using default facts which are gathered by default with default first task.
+# In case if we are sure that you are not using facts which set by gathering facts task then you can disable them by using gather_facts : false in global section.
+
+
+- name: No gathering facts
+  gather_facts: false 
+  hosts: all
+  tasks:
+    - name: Print local fact
+      debug:
+        msg: URL == {{URL}}
+      vars:
+        URL: tasks.google.com
