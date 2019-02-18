@@ -1,0 +1,7 @@
+- name: Deploy Web and Application 
+  hosts: all
+  tasks:
+    - name: Install a web server
+      package:  
+        name: httpd
+        state: present
