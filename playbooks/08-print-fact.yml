@@ -4,4 +4,8 @@
     - name: Print fact 
       debug:
         msg: "IPAddress = {{ansible_default_ipv4}}"
-        
+
+    ## Above one will print the complete MAP of ansible_default_ipv4, Now we will print only address
+    - name: Print fact only address
+      debug:
+        msg: "IPAddress = {{ansible_default_ipv4.address}}"
