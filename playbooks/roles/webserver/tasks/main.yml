@@ -13,3 +13,9 @@
     url: https://s3-us-west-2.amazonaws.com/studentapi-cit/index.html
     dest: /var/www/html/index.html
     
+- name: Restart service httpd
+  service:
+    name: httpd
+    state: restarted
+    enabled: yes
+  
