@@ -3,6 +3,7 @@
   tasks:
     - name: blockinfile 
       blockinfile:
+        create: yes
         path: /tmp/sample1.txt
         block: |
           Hello
