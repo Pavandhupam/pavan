@@ -1,0 +1,11 @@
+- name: Become a root user
+  hosts: all
+  tasks: 
+    - name: Print id command 
+      shell: id
+      register: out1
+
+    - debug:
+        msg: "{{out1}}"
+
+    
