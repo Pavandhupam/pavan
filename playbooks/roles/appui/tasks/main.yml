@@ -4,3 +4,16 @@
     dest: /home/{{APPUSER}}
     remote_src: yes
   become_user: "{{APPUSER}}"
+
+- name: Download war file 
+  get_url:
+    url: "{{UI_WAR_URL}}"
+    dest: "{{TOMCAT_LOCATION}}/webapps/student.war"
+  become_user: "{{APPUSER}}"
+
+- name: Download MySQL Jar file 
+  get_url:
+    url: "{{MYSQL_JAR_URL}}"
+    dest: "{{TOMCAT_LOCATION}}/lib/mysql-connector.jar"
+  become_user: "{{APPUSER}}"
+
