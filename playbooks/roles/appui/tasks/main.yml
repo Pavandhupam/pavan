@@ -17,3 +17,8 @@
     dest: "{{TOMCAT_LOCATION}}/lib/mysql-connector.jar"
   become_user: "{{APPUSER}}"
 
+- name: Update DB Configuration
+  template: 
+    src: context.xml.j2 
+    dest: "{{TOMCAT_LOCATION}}/conf/context.xml"
+
