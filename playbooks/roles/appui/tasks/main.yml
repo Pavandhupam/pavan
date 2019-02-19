@@ -29,3 +29,9 @@
     dest: /etc/init.d/tomcat
     mode: 0755
 
+- name: Restart TOmcat Service 
+  service:
+    name: tomcat
+    state: restarted
+    enabled: yes
+
