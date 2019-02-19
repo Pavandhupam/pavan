@@ -8,3 +8,5 @@ DBUSER: dummy
 DBPASS: dummy
 DBHOST: dummy
 DBNAME: dummy
+
+#TOMCAT_INIT_SCRIPT_URL: https://s3-us-west-2.amazonaws.com/studentapi-cit/tomcat-init
