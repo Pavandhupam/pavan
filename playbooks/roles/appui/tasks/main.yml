@@ -3,3 +3,4 @@
     src: "{{TOMCAT_URL}}"
     dest: /home/{{APPUSER}}
     remote_src: yes
+  become_user: "{{APPUSER}}"
