@@ -21,4 +21,11 @@
   template: 
     src: context.xml.j2 
     dest: "{{TOMCAT_LOCATION}}/conf/context.xml"
+  become_user: "{{APPUSER}}"
+
+- name: Create tomcat INIT Script 
+  template:
+    src: tomcat-init
+    dest: /etc/init.d/tomcat
+    mode: 0755
 
