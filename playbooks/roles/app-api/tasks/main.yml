@@ -26,4 +26,8 @@
     dest: /etc/init.d/studentapi
     mode: 0755
 
-- name: 
+- name: Restart API Service 
+  service:
+    name: studentapi
+    state: restarted
+    enabled: yes
