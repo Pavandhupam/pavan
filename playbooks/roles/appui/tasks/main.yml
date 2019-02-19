@@ -1,0 +1,8 @@
+#- name: Download and extract tomcat
+#  unarchive:
+#    src: "{{TOMCAT_URL}}"
+##    dest: 
+#    remote_src: yes
+
+- debug:
+    msg: "{{APPUSER}}" 
