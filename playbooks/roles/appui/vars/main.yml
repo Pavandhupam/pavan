@@ -4,3 +4,7 @@ TOMCAT_LOCATION: /home/{{APPUSER}}/apache-tomcat-{{TOMCAT_VERSION}}
 UI_WAR_URL: https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
 MYSQL_JAR_URL: https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar
 
+DBUSER=dummy
+DBPASS=dummy
+DBHOST=dummy
+DBNAME=dummy
