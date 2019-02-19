@@ -1,0 +1,6 @@
+- name: Create API directory 
+  file:
+    path: "{{API_DIR}}"
+    state: directory
+  become_user: "{{APPUSER}}"
+
