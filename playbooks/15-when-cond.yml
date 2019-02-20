@@ -6,8 +6,11 @@
       package:
         name: apache2
         state: present
+      when: ansible_distribution == "Ubuntu"
 
     - name: Install web server on centos
       package:
         name: httpd
         state: present
+      when: ansible_distribution == "CentOS"
+      
