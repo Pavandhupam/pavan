@@ -10,3 +10,10 @@
         - httpd
         - vim 
         - unzip
+
+    - name: Demo on loop with hash 
+      debug:
+        msg: "Course Name -- {{item.course_name}} & Course Timing -- {{item.timings}}"
+      loop: 
+        - {course_name: 'DevOps', timings: '7AM'}
+        - {course_name: 'AWS', timings: '8AM'}
