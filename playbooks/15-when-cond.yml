@@ -2,7 +2,12 @@
   hosts: all 
   become: yes
   tasks:
-    - name: Install web server 
+    - name: Install web server on ubuntu
       package:
         name: apache2
+        state: present
+
+    - name: Install web server on centos
+      package:
+        name: httpd
         state: present
