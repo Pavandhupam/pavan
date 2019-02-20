@@ -1,0 +1,6 @@
+- name: ddemo on vaults usage
+  hosts: centos
+  vars:
+    password: abcd@123
+  tasks:
+    - debug: msg="Password = {{password}}"
