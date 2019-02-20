@@ -1,0 +1,8 @@
+- name: Demo on when conditions 
+  hosts: all 
+  become: yes
+  tasks:
+    - name: Install web server 
+      package:
+        name: httpd
+        state: installed
