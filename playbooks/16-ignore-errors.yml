@@ -5,5 +5,6 @@
     - name: Check web server is running or not.
       shell: ps -ef | grep httpd | grep -v grep
       register: out 
+      ignore_errors: true
 
     - debug: msg="{{out}}"
