@@ -22,4 +22,3 @@
       debug:
         msg: "item[0]"
       loop: "{{ ['alice', 'bob'] |product(['clientdb', 'employeedb', 'providerdb'])|list }}"
-      - name: give users access to multiple databases
