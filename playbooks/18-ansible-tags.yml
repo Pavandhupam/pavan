@@ -1,0 +1,23 @@
+- name: Tags in ansible 
+  hosts: centos
+  become: yes
+  tasks:
+    - name: Install web server 
+      package: 
+        name: httpd
+        state: present
+
+    - name: Start web server 
+      service:
+        name: httpd 
+        state: started
+      
+    - name: Install tomcat 
+      package:
+        name: tomcat 
+        state: present
+
+    - name: Start tomcat 
+      service:
+        name: tomcat 
+        state: started
