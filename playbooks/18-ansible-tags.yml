@@ -18,9 +18,10 @@
       package:
         name: tomcat 
         state: present
-      tags: t
+      tags: tomcat
 
     - name: Start tomcat 
       service:
         name: tomcat 
         state: started
+      tags: tomcat
