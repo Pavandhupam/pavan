@@ -1,0 +1,9 @@
+- name: Demo on ignore_errors on web server restart 
+  hosts: centos
+  become: yes
+  tasks:
+    - name: Check web server is running or not.
+      shell: ps -ef | grep httpd | grep -v grep
+      register: out 
+
+    - debug: msg="{{out}}"
