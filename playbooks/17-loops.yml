@@ -17,3 +17,15 @@
       loop: 
         - {course_name: 'DevOps', timings: '7AM'}
         - {course_name: 'AWS', timings: '8AM'}
+
+    - name: Complex loops
+      debug:
+        msg: "item[0]"
+      loop: "{{ ['alice', 'bob'] |product(['clientdb', 'employeedb', 'providerdb'])|list }}"
+      - name: give users access to multiple databases
+  mysql_user:
+    name: "{{ item[0] }}"
+    priv: "{{ item[1] }}.*:ALL"
+    append_privs: yes
+    password: "foo"
+  loop: "{{ ['alice', 'bob'] |product(['clientdb', 'employeedb', 'providerdb'])|list }}"
