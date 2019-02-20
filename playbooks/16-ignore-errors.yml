@@ -11,9 +11,10 @@
       service:
         name: httpd
         state: started
+      when: out.rc == 1
 
     - name: Restart the service if started
       service:
         name: httpd
         state: restarted
-        
+      when: out.rc == 0
