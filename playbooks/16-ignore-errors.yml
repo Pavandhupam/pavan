@@ -7,4 +7,13 @@
       register: out 
       ignore_errors: true
 
-    - debug: msg="{{out}}"
+    - name: Start the service if not started
+      service:
+        name: httpd
+        state: started
+
+    - name: Restart the service if started
+      service:
+        name: httpd
+        state: restarted
+        
